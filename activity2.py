@@ -181,6 +181,7 @@ def insertMathematics(conn):
     ]
 
     db['regala_edSheeranDiscography'].insert_many(MathematicsRecords)
+    print("Check")
 
 # [4] insertMany Autumn Variations
 
@@ -203,6 +204,7 @@ def insertAutumnVariations(conn):
     ]
 
     db['regala_edSheeranDiscography'].insert_many(AutumnVariationsRecords)
+    print("Check")
 
 # [5] Query songs released in 2019 and 2020
 
@@ -212,6 +214,7 @@ def findFunction(conn):
     db = conn["manilaRecords"]
     results1 = db['regala_edSheeranDiscography'].find(query1)
     print(results1)
+    print("Check")
 
 # [6] Update Documents
 
@@ -308,6 +311,7 @@ def updateMathematics(conn):
     db['regala_edSheeranDiscography'].update_many(updateQuery3, updateValue3)
     db['regala_edSheeranDiscography'].update_many(updateQuery4, updateValue4)
     db['regala_edSheeranDiscography'].update_many(updateQuery5, updateValue5)
+    print("Check")
 
 # [7] Rename Field
 
@@ -320,6 +324,7 @@ def renameRuntime(conn):
     }
 
     db['regala_edSheeranDiscography'].update_many(runtimeQuery, runtimeUpdate)
+    print("Check")
 
 # [8] Query songs in 'Multiply' with duration > 4 minutes
 
@@ -334,12 +339,14 @@ def findFunction2(conn):
     }
     results2 = db['regala_edSheeranDiscography'].find(query2)
     print(results2)
+    print("Check")
 
 def deleteAutumnVariations(conn):
 
     db = conn["manilaRecords"]
     deleteQuery = { "album" : "autumn variations" }
     db['regala_edSheeranDiscography'].delete_many(deleteQuery)
+    print("Check")
 
 if __name__ == "__main__":
 
